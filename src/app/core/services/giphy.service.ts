@@ -13,14 +13,20 @@ export class GiphyService {
   constructor(private http: HttpClient) { }
 
   searchGifs(input: string){
-    return this.http.get(`${environment.baseUrl}/search?q=${input}&api_key=${environment.giphyApiKey}&limit=10`)
+    return this.http.get(`${environment.baseUrl}/search?q=${input}&api_key=${environment.giphyApiKey}&limit=20`)
     .subscribe((res: any)=>{
         this.gifs.next(res.data);
     });
   }
 
+  // Stellt die Gifs als Strem zur Verfügung
   getGifs(){
     return this.gifs.asObservable();
+  }
+
+  //wird aufgerufen um den Output der Gif-komponente abzuändern
+  changeGifs(gifs:any[]){
+    this.gifs.next(gifs);
   }
 
 }

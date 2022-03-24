@@ -1,4 +1,39 @@
 .gifs{
     width: 95%;
     height: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-md-4{
+    padding:1%;
+}
+
+.label{
+    background-color: rgb(124, 124, 124);
+    opacity: 70%;
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    }
+
+.love{
+        background-color: red;
+        opacity: 70%;
+        width: 95%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+
+.label:hover{
+    opacity: 90%;
 }
